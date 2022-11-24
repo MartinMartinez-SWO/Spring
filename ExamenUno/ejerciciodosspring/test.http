@@ -1,0 +1,9 @@
+###
+GET http://localhost:8080/empleado/lista
+
+###
+GET http://localhost:8080/empleado/3
+
+###
+GET http://localhost:8080/empleado/por-email/martin@martin.com
+

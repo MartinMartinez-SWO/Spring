@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+</head>
+<body>
+    <h1>MODIFICAR ALUMNO</h1>
+    <form th:action="@{/alumno/save}" th:object="${alumno}" method="post">
+        <input type="text" th:field="*{nombre}" name="alumno" placeholder="Nombre" autocomplete="off"> <br>
+        <input type="text" th:field="*{apellidoUno}" name="primer apellido" placeholder="Nombre" autocomplete="off"> <br>
+        <input type="text" th:field="*{apellidoDos}" name="segundo apellido" placeholder="Nombre" autocomplete="off"> <br>
+        <input type="text" th:field="*{nota}" name="nota" placeholder="Nombre" autocomplete="off"> <br>
+
+        <input type="hidden" th:field="*{id}">
+
+        <button type="submit">Modify</button>
+    </form>
+</body>
+</html>

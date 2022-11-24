@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    
+    <form th:action="@{send}" method="get" th:object="${raqueta}">
+        <input th:field="*{marca}" type="text" name="marca" id="marca" placeholder="marca"><br>
+        <input th:field="*{modelo}" type="text" name="modelo" id="modelo" placeholder="modelo"><br>
+        <input th:field="*{peso}" type="text" name="peso" id="peso" placeholder="peso"><br>
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

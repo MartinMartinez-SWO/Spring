@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>Añadir coche</h1>
+
+    <form th:action="@{/concesionario/anhadir}" th:object="${coche}" method="get">
+        <input type="text" th:field="*{marca}" name="marca" placeholder="Marca" autocomplete="off"> <br>
+        <input type="text" th:field="*{modelo}" name="modelo" placeholder="Modelo" autocomplete="off"> <br>
+        <input type="text" th:field="*{precio}" name="precio" placeholder="Precio" autocomplete="off"> <br>
+       
+        <!--<input type="hidden" th:field="*{id}">-->
+        <button type="submit">Add Car</button>
+    </form>
+
+</body>
+</html> 

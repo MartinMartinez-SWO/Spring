@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularioGuardado</title>
+</head>
+<body>
+    <form th:action="@{/inmobiliaria/save-item}" th:object="${inmueble}" method="POST">
+        <label for="meters">Metros cuadrados</label><br>
+        <input type="text" th:field="*{metrosCuadrados}" name="metrosCuadrados" id="meters"><br><br>
+        <label for="price">Precio</label><br>
+        <input type="text" th:field="*{precio}" name="precio" id="price"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
